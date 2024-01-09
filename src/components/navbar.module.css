@@ -1,0 +1,13 @@
+.link {
+  text-decoration: none;
+  color: #ffff;
+  margin: 10px;
+}
+
+.mobile {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  margin: 20px 0;
+  color: black;
+}
