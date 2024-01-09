@@ -7,7 +7,6 @@ export const getAllBook = async () => {
       "X-RapidAPI-Host": "books-api7.p.rapidapi.com",
     },
   };
-
   try {
     const res = await fetch(url, options);
     if (!res.ok) {
