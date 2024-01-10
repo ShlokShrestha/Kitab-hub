@@ -1,23 +1,33 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import styles from "./navbar.module.css";
+
 const BookCard = ({ book }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia sx={{ height: 400 }} image={book.cover} title="green iguana" />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {book.title}
-        </Typography>
-      </CardContent>
-      <CardActions sx={{ textAlign: "center" }}>
-        <Button size="small">Share</Button>
-      </CardActions>
+      <Link href={`/book/${book._id}`} className={styles.card}>
+        <CardMedia
+          sx={{ height: 400 }}
+          image={book.cover}
+          title="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="overline">
+            {book.genres[1]}
+          </Typography>
+          <Typography gutterBottom variant="h6">
+            {book.title.slice(0, 20)}
+          </Typography>
+          <Typography gutterBottom variant="body1">
+            Rating: {book.rating}
+          </Typography>
+        </CardContent>
+      </Link>
     </Card>
   );
 };

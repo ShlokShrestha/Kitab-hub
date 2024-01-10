@@ -1,9 +1,5 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Container } from "@mui/material";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Kitab hub",
@@ -13,7 +9,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ marginTop: "72px" }}>
+      <title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </title>
+      <body>
         <>
           <Navbar />
           {children}

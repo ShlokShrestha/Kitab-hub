@@ -1,6 +1,6 @@
 .link {
   text-decoration: none;
-  color: #ffff;
+  color: #000;
   margin: 10px;
 }
 
@@ -9,5 +9,10 @@
   flex-direction: column;
   text-decoration: none;
   margin: 20px 0;
-  color: black;
+  color: #000;
+}
+
+.card{
+  text-decoration: none;
+  color: #000;
 }
