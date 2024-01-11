@@ -11,6 +11,7 @@ import React from "react";
 import BookCard from "@/components/BookCard";
 const page = async () => {
   const data = await getAllBook();
+  
   return (
     <Container>
       <Box>
