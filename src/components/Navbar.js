@@ -22,7 +22,7 @@ import { Container } from "@mui/material";
 const drawerWidth = 240;
 const navItems = [
   { title: "Home", path: "/" },
-  { title: "Book", path: "/book" },
+  { title: "Book", path: "/books" },
   { title: "About", path: "/about" },
 ];
 

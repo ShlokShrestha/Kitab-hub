@@ -1,5 +1,5 @@
-export const getAllBook = async () => {
-  const url = `https://books-api7.p.rapidapi.com/books?p=1`;
+export const getAllBook = async (currentPage = 1) => {
+  const url = `https://books-api7.p.rapidapi.com/books?p=${currentPage}`;
   const options = {
     method: "GET",
     headers: {
@@ -13,6 +13,7 @@ export const getAllBook = async () => {
       throw new Error("Failed to fetch data");
     }
     const data = await res.json(); // Wait for the JSON parsing to complete
+
     return data;
   } catch (error) {
     console.error(error);
