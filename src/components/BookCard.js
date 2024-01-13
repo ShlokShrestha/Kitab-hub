@@ -10,7 +10,7 @@ import styles from "./navbar.module.css";
 const BookCard = ({ book }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <Link href={`/book/${book._id}`} className={styles.card}>
+      <Link href={`/books/${book.book_id}`} className={styles.card}>
         <CardMedia
           sx={{ height: 400 }}
           image={book.cover}
