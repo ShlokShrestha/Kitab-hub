@@ -5,7 +5,6 @@ import React from "react";
 const page = async ({ params }) => {
   const id = parseInt(params.id);
   const bookDetail = await getBookDetail(id);
-
   return (
     <Container sx={{ my: 4 }}>
       <Grid container spacing={2}>
